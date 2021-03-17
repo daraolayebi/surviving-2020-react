@@ -14,13 +14,13 @@ class Slideshow extends Component {
 		}, 1000);
 	}
 
-	setCurrentImage = () => {
-		return this.state.images[Math.abs(this.currentIndex) % this.state.images.length];
-	};
+	// setCurrentImage = () => {
+	// 	return this.state.images[Math.abs(this.currentIndex) % this.state.images.length];
+	// };
 
-	startSlide = () => {
-		this.setState({timer: setInterval((this.state.currentIndex += 1), 2000)});
-	};
+	// startSlide = () => {
+	// 	this.setState({timer: setInterval((this.state.currentIndex += 1), 2000)});
+	// };
 
 	render() {
 		return (
