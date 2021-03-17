@@ -18,9 +18,10 @@ class Slideshow extends Component {
 	// 	return this.state.images[Math.abs(this.currentIndex) % this.state.images.length];
 	// };
 
-	// startSlide = () => {
-	// 	this.setState({timer: setInterval((this.state.currentIndex += 1), 2000)});
-	// };
+	startSlide = () => {
+		console.log(200);
+		// this.setState({timer: setInterval((this.state.currentIndex += 1), 2000)});
+	};
 
 	render() {
 		return (

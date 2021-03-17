@@ -13,7 +13,7 @@ class About extends Component {
 							<u>
 								<a target="_blank" rel="noreferrer" href="https://www.oluwadara.com/">
 									{" "}
-									Dara{" "}
+									Dara Olayebi
 								</a>
 							</u>
 							. Surviving 2020 is a web project I built to bring people together by connecting them during this very

@@ -12,10 +12,6 @@ class AppHeader extends Component {
 		// @click="toggleMenu('.mobile-menu-list')"
 	};
 
-	showAbout = () => {
-		// @click="showAboutContent"
-	};
-
 	render() {
 		let mobileIcon;
 		if (this.menuIsVisible) {
@@ -36,24 +32,6 @@ class AppHeader extends Component {
 							{mobileIcon}
 						</div>
 					</div>
-
-					{/* <div className="mobile-menu-list">
-							<div className="app-name">
-								<AppName />
-							</div>
-							<li className="footer-link">
-								<Link to="/">Home</Link>
-							</li>
-							<li className="footer-link" onClick={this.showAbout}>
-								<span>About Project</span>
-							</li>
-							<li className="footer-link">
-								<Link to="/submit-story">Share your story</Link>
-							</li>
-							<li className="footer-link">
-								<Link to="/stories">Explore stories</Link>
-							</li>
-						</div> */}
 				</header>
 			</Fragment>
 		);

@@ -29,6 +29,7 @@ class Home extends Component {
 					</transition> */}
 
 					{/* <transition name="slide-fade"> */}
+
 					<h1 className="home-intro">
 						<Typed
 							strings={[
@@ -38,10 +39,6 @@ class Home extends Component {
 						/>
 					</h1>
 					{/* </transition> */}
-
-					{/* <transition name="fade">
-						<home-menu v-if="showMenu" />
-					</transition> */}
 				</div>
 			</div>
 		);
