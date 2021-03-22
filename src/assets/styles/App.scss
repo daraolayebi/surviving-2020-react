@@ -737,24 +737,11 @@ form {
     margin-right: 40px;
     min-width: 220px;
     transition: all 300ms ease-in-out;
+    &:focus {
+        border-bottom: 1px solid #ffffff;
+    }
 }
 
-.form-input:focus {
-    border-bottom: 1px solid #ffffff;
-}
-
-// .loader-icon {
-//     text-align: center;
-//     margin: auto;
-//     .saving {
-//         font-family: "Brown", sans-serif;
-//         text-transform: uppercase;
-//         font-size: 13px;
-//         font-weight: 400;
-//         letter-spacing: 3px;
-//         text-align: center;
-//     }
-// }
 .saving span {
     animation-name: blink;
     animation-duration: 1.4s;
@@ -810,10 +797,6 @@ form {
     transition: 300ms ease-in-out;
     vertical-align: middle;
     margin-left: 20px;
-}
-
-.plus {
-    margin-right: 10px;
 }
 
 .success-cta {
@@ -1293,8 +1276,6 @@ body.has-clause {
         margin-top: 35px;
     }
     .response-owner {
-        display: block;
-        font-size: 13px;
         padding-top: 10px;
     }
     .responses-map {

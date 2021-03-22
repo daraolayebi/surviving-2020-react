@@ -781,10 +781,6 @@ form {
   margin-left: 20px;
 }
 
-.plus {
-  margin-right: 10px;
-}
-
 .success-cta {
   margin-top: 30px;
 }
@@ -1265,8 +1261,6 @@ body.has-clause .submit-button {
     margin-top: 35px;
   }
   .response-owner {
-    display: block;
-    font-size: 13px;
     padding-top: 10px;
   }
   .responses-map {
