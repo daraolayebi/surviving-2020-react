@@ -31,8 +31,6 @@ class AppHeader extends Component {
 						<div className="mobile-menu-icon" onClick={this.toggleMenu}>
 							{mobileIcon}
 						</div>
-
-						<p>Change phase</p>
 					</div>
 				</header>
 			</Fragment>

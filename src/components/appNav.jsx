@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import AppName from "./AppName";
 
-class AppFooter extends Component {
+class AppNav extends Component {
 	state = {};
 
 	updateBg = (colour) => {
@@ -38,4 +38,4 @@ class AppFooter extends Component {
 	}
 }
 
-export default AppFooter;
+export default AppNav;

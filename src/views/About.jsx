@@ -11,7 +11,7 @@ class About extends Component {
 						<p>
 							Hi! 👋🏾 My name is{" "}
 							<u>
-								<a target="_blank" rel="noreferrer" href="https://www.oluwadara.com/">
+								<a target="_blank" rel="noreferrer noopener" href="https://www.oluwadara.com/">
 									{" "}
 									Dara Olayebi
 								</a>

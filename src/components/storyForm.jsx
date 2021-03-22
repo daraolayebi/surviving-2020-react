@@ -32,15 +32,16 @@ class StoryForm extends Component {
 
 	handleSubmit = (event) => {
 		event.preventDefault();
+
 		if (!event.target.checkValidity()) return;
+
+		this.setState({loading: true, error: false});
 
 		let payload = {
 			name: this.state.name,
 			city: this.state.city,
 			response: this.props.activePhrase + " " + this.state.response,
 		};
-
-		this.setState({loading: true, error: false});
 
 		axios
 			.post(baseURL + "/response", payload)
@@ -93,11 +94,11 @@ class StoryForm extends Component {
 							<div className="main-label">
 								<div>
 									{this.props.activePhrase}
-									<span className="phrase-dots"> . . .</span>
+									{this.props.activePhrase && <span className="phrase-dots"> . . .</span>}
 								</div>
 								<div className="main-label-toggle">
 									<p className="phrase-switch" onClick={() => this.props.displayPhrases()}>
-										Click to change phrase
+										Change phrase
 									</p>
 								</div>
 							</div>
