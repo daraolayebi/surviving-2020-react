@@ -9,20 +9,20 @@ class About extends Component {
 					<h1>About #Surviving2020</h1>
 					<div className="about-project-text">
 						<p>
-							Hi! My name is{" "}
+							Hi! 👋🏾 My name is{" "}
 							<u>
 								<a target="_blank" rel="noreferrer" href="https://www.oluwadara.com/">
 									{" "}
 									Dara Olayebi
 								</a>
 							</u>
-							. Surviving 2020 is a web project I built to bring people together by connecting them during this very
-							unusual year. With four different phrases, I invite you to express yourself by sharing your emotions,
-							experiences and thoughts with other people around the world.
+							. Surviving 2020 is a web project I built with the aim of connecting people during the very unusual
+							year that was 2020. With four different phrases, I invite you to express yourself by sharing your
+							emotions, experiences and thoughts with people around the world.
 							<br />
 							<br />
-							I hope this project brings you a little peace knowing that you are not alone, and most importantly,
-							that we will survive this tough year together!
+							I hope this project brings you a little bit of joy, knowing that you are not alone, but most
+							importantly, that you survived 2020!
 							<br />
 							<br />
 							<small>
@@ -31,9 +31,9 @@ class About extends Component {
 						</p>
 					</div>
 
-					<h2 className="close-about" onClick={this.props.history.goBack}>
+					<button className="close-about" onClick={this.props.history.goBack}>
 						<u>Close</u>
-					</h2>
+					</button>
 				</div>
 			</div>
 		);

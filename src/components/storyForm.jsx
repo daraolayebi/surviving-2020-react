@@ -1,36 +1,63 @@
 import React, {Component} from "react";
-import NavArrow from "../assets/icons/arrow-navigation-white.svg";
+import NavArrow from "../assets/icons/arrow-button.svg";
+import FormSuccessModal from "./FormSuccessModal";
+import baseURL from "../resources/apiBaseUrl";
+import axios from "axios";
 
 class StoryForm extends Component {
 	state = {
 		name: "",
 		city: "",
 		response: "",
-		button: false,
+		loading: false,
+		submitted: false,
+		error: false,
 	};
 
 	handleChange = (event) => {
 		this.setState({[event.target.name]: event.target.value});
 	};
 
-	toggleClause = (action) => {
-		if (action === "remove" && this.state.response) document.body.classList.remove("has-clause");
-		else if (action === "add") document.body.classList.add("has-clause");
+	showClause = () => {
+		document.body.classList.add("has-clause");
 	};
 
-	hideClause = (el) => {
-		console.log("sdf");
+	hideClause = () => {
+		if (!this.state.response) document.body.classList.remove("has-clause");
 	};
 
-	submitResponse = (event) => {
+	clearModal = () => {
+		this.setState({submitted: false});
+	};
+
+	handleSubmit = (event) => {
 		event.preventDefault();
+		if (!event.target.checkValidity()) return;
+
+		let payload = {
+			name: this.state.name,
+			city: this.state.city,
+			response: this.props.activePhrase + " " + this.state.response,
+		};
+
+		this.setState({loading: true, error: false});
+
+		axios
+			.post(baseURL + "/response", payload)
+			.then((response) => {
+				this.setState({loading: false, submitted: true});
+			})
+			.catch((error) => {
+				this.setState({loading: false, error: true});
+			});
 	};
 
 	render() {
+		const {loading, error, submitted} = this.state;
 		return (
 			<React.Fragment>
 				<div className="story-form">
-					<form onSubmit={this.submitResponse} autoComplete="off">
+					<form onSubmit={this.handleSubmit} autoComplete="off">
 						<input autoComplete="false" type="hidden" />
 						<div className="form-body">
 							<div className="form-group-block">
@@ -70,7 +97,7 @@ class StoryForm extends Component {
 								</div>
 								<div className="main-label-toggle">
 									<p className="phrase-switch" onClick={() => this.props.displayPhrases()}>
-										Change Story
+										Click to change phrase
 									</p>
 								</div>
 							</div>
@@ -80,10 +107,8 @@ class StoryForm extends Component {
 									aria-label="Response"
 									name="response"
 									id="response"
-									// onKeyPress="showSubmitButton('.submit-button', '.form-clause')"
-									// onKeyUp="showSubmitButton('.submit-button', '.form-clause')"
-									onFocus={() => this.toggleClause("add")}
-									onBlur={() => this.toggleClause("remove")}
+									onFocus={this.showClause}
+									onBlur={this.hideClause}
 									onChange={this.handleChange}
 									placeholder="Your response goes here"
 									className="main-input"
@@ -91,23 +116,39 @@ class StoryForm extends Component {
 									autoComplete="off"
 									required
 								/>
+								<button
+									type="submit"
+									disabled={loading}
+									className="button submit-button"
+									aria-label="Submit Form"
+									title="Submit Form">
+									<span>
+										{loading ? (
+											<span className="saving">
+												Saving your story <span>.</span>
+												<span>.</span>
+												<span>.</span>
+											</span>
+										) : (
+											"Share"
+										)}
+									</span>
+									{!loading && <img src={NavArrow} alt="Navigation Arrow" title="Navigation Arrow" />}
+								</button>
 							</div>
 							<div className="form-footer">
 								<small className="form-clause">
-									* After you submit, you will see your story on the stories page.
+									* After you submit, your story will appear on the stories page.
 								</small>
 							</div>
-							{/* <small className="form-error">
-								We are having some trouble submitting your response. Please try again.
-							</small> */}
-							<div className="form-button">
-								<button type="submit" className="button submit-button" aria-label="Submit FormSubmit Form">
-									<span>Submit</span>
-									<img src={NavArrow} alt="Navigation Arrow" title="Navigation Arrow" />
-								</button>
-							</div>
+							{error && (
+								<small className="form-error">
+									We are having some trouble submitting your response. Please try again.
+								</small>
+							)}
 						</div>
 					</form>
+					{submitted && <FormSuccessModal clearModal={this.clearModal} />}
 				</div>
 			</React.Fragment>
 		);

@@ -6,16 +6,16 @@ class AppFooter extends Component {
 	state = {};
 
 	updateBg = (colour) => {
-		console.log(colour);
+		// console.log(colour);
 	};
 
 	removeBg = (colour) => {
-		console.log(colour);
+		// console.log(colour);
 	};
 
 	render() {
 		return (
-			<div className="app-menu">
+			<nav className="app-menu">
 				<ul>
 					<li className="for-mobile">
 						<AppName />
@@ -33,7 +33,7 @@ class AppFooter extends Component {
 						<Link to="/explore-stories">Explore Stories</Link>
 					</li>
 				</ul>
-			</div>
+			</nav>
 		);
 	}
 }

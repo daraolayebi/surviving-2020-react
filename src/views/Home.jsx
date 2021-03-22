@@ -1,44 +1,37 @@
 import React, {Component} from "react";
 import Typed from "react-typed";
-import Slideshow from "../components/imageSlideshow";
+// import Slideshow from "../components/imageSlideshow";
+import SlideshowGif from "../assets/images/slideshow.gif";
 
 class Home extends Component {
 	state = {
-		slideshowVisible: true,
+		slideshowVisible: false,
+		slideshow: "",
 	};
 
-	// componentDidMount() {
-	// 	this.setState({slideshowVisible: true});
-	// }
+	componentDidMount() {
+		setTimeout(() => {
+			let home = document.querySelector(".home");
+			this.setState({slideshowVisible: true});
+			if (home) home.classList.add("no-divider");
+		}, 2500);
+	}
 
 	render() {
 		return (
 			<div className="home">
 				<div className="home-inner">
-					<Slideshow />
-					{/* {this.slideshowVisible ? (
-						<div>
-							
-						</div>
-					) : (
-						<div></div>
-					)} */}
-
-					{/* <transition name="slide-fade">
-						<image-slideshow v-if="showSlideshow" />
-					</transition> */}
-
-					{/* <transition name="slide-fade"> */}
-
-					<h1 className="home-intro">
-						<Typed
-							strings={[
-								"Take a moment to share your 2020 story and discover what the rest of the world is going through ...",
-							]}
-							typeSpeed={40}
-						/>
-					</h1>
-					{/* </transition> */}
+					<div className="intro-content">
+						{this.state.slideshowVisible && <img src={SlideshowGif} alt="Slideshow" className="slideshow-gif" />}
+						<h1 className="home-intro">
+							<Typed
+								strings={[
+									"Take a moment to share your 2020 story and discover what the rest of the world has been through",
+								]}
+								typeSpeed={40}
+							/>
+						</h1>
+					</div>
 				</div>
 			</div>
 		);

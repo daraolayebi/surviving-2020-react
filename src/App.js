@@ -11,6 +11,16 @@ const SubmitStory = lazy(() => import("./views/SubmitStory"));
 const AllStories = lazy(() => import("./views/AllStories"));
 
 class App extends Component {
+	componentDidUpdate(prevProps) {
+		if (this.props.location !== prevProps.location) {
+			this.onRouteChanged();
+		}
+	}
+
+	onRouteChanged() {
+		console.log("ROUTE CHANGED");
+	}
+
 	render() {
 		return (
 			<Fragment>
@@ -21,7 +31,7 @@ class App extends Component {
 						<Route path="/submit-story" component={SubmitStory}></Route>
 						<Route path="/explore-stories" component={AllStories}></Route>
 						<Route exact path="/" component={Home}></Route>
-						<Route render={() => <h1>404: page not found</h1>} />
+						{/* <Route render={() => <h1>404: page not found</h1>} /> */}
 					</Suspense>
 				</Switch>
 				<AppNav />

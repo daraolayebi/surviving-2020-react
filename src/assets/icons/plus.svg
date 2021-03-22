@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 172 172" style=" fill:#000000;">
-    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-        <path d="M0,172v-172h172v172z" fill="none"></path>
-        <g fill="#E08E5D">
-            <path d="M78.83333,21.5v57.33333h-57.33333v14.33333h57.33333v57.33333h14.33333v-57.33333h57.33333v-14.33333h-57.33333v-57.33333z"></path>
-        </g>
-    </g>
-</svg>
+<svg xmlns='http://www.w3.org/2000/svg' class='ionicon'  width="30" height="30" viewBox='0 0 512 512'><title>Add</title><path fill='none' stroke='#E08E5D' stroke-linecap='round' stroke-linejoin='round' stroke-width='32' d='M256 112v288M400 256H112'/></svg>

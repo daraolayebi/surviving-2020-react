@@ -9,7 +9,7 @@ class AppHeader extends Component {
 		menuIsVisible: false,
 	};
 	toggleMenu = () => {
-		// @click="toggleMenu('.mobile-menu-list')"
+		document.querySelector(".app-menu").classList.add("show");
 	};
 
 	render() {

@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {imageLinks as images} from "../resources/imageLinks";
+import SlideshowGif from "../assets/images/slideshow.gif";
 
 class Slideshow extends Component {
 	state = {
@@ -27,6 +28,7 @@ class Slideshow extends Component {
 		return (
 			<div className="slideshow">
 				<div className="slideshow-container">
+					<img src={SlideshowGif} alt="Slideshow" />
 					{/* {this.setCurrentImage} */}
 					{/* <div
 						className="slideshow-slide"
