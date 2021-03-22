@@ -513,7 +513,11 @@ form {
   text-align: center;
   max-width: 500px;
   margin: 0 auto;
-  padding-top: 150px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .about-project-text {
@@ -529,25 +533,13 @@ form {
 /* stories */
 .stories {
   height: 100vh;
+  background: #212325;
   background-attachment: fixed;
   position: relative;
 }
 
-.responses-bg {
-  content: "";
-  background: url("../icons/world.svg") no-repeat center;
-  background-size: 70%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  opacity: 1;
-  transform: scale(1);
-  /* animation: fadein 10s linear infinite; */
-  transition: all 3s ease-in-out;
-  /* animation-iteration-count: infinite; */
+.stories span {
+  display: block;
 }
 
 @keyframes fadein {
@@ -590,8 +582,21 @@ form {
 
 .responses-list {
   padding-top: 150px;
-  overflow: hidden;
+  overflow: scroll;
   position: relative;
+  z-index: 999999;
+}
+
+.responses-map {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: auto;
+  width: 50%;
+  opacity: 0.3;
+  z-index: 1;
 }
 
 .responses-toggle {
@@ -610,14 +615,15 @@ form {
 }
 
 .responses-inner {
-  height: 70vh;
-  overflow: hidden;
+  z-index: 999999;
+  height: 69vh;
+  overflow: scroll;
   margin: auto;
   text-align: center;
 }
 
 .single-response {
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1.6;
   padding: 23px 0;
 }
@@ -627,6 +633,7 @@ form {
 }
 
 .response-owner {
+  font-family: "Calibre", sans-serif;
   font-style: italic;
   color: #c2c2c2;
 }
@@ -1263,6 +1270,13 @@ body.has-clause .submit-button {
     font-size: 13px;
     padding-top: 10px;
   }
+  .responses-map {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: none;
+    width: auto;
+  }
   .stories {
     height: auto;
     min-height: 100vh;
@@ -1305,7 +1319,10 @@ body.has-clause .submit-button {
   }
   .about-project-inner {
     margin-top: 50px;
-    padding: 30px;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
   }
   .about-inner {
     max-width: 100%;

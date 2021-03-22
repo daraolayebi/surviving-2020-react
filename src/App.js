@@ -12,13 +12,11 @@ const AllStories = lazy(() => import("./views/AllStories"));
 
 class App extends Component {
 	componentDidUpdate(prevProps) {
+		console.log("ROUTE CHANGED");
 		if (this.props.location !== prevProps.location) {
+			console.log("ROUTE CHANGED");
 			this.onRouteChanged();
 		}
-	}
-
-	onRouteChanged() {
-		console.log("ROUTE CHANGED");
 	}
 
 	render() {

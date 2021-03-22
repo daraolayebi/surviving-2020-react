@@ -1,5 +1,5 @@
 import React, {Component, lazy} from "react";
-const StoryForm = lazy(() => import("../components/StoryForm"));
+const StoryForm = lazy(() => import("../components/storyForm"));
 const PhrasesList = lazy(() => import("../components/PhrasesList"));
 
 class SubmitStory extends Component {
