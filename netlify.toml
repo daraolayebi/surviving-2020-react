@@ -3,7 +3,5 @@
   to = "/index.html"
   status = 200
   
-
-[[build]]	
+[build]
   command = "npm run build"
-  build = "dist"
