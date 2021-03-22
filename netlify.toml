@@ -1,4 +1,9 @@
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200
+  status = 
+  
+
+  [build]	
+    command = "npm run build"
+    build = "dist"

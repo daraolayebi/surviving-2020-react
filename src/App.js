@@ -2,8 +2,8 @@ import "./assets/styles/App.scss";
 import React, {Component, Fragment, Suspense, lazy} from "react";
 import {Route, Switch} from "react-router-dom";
 
-import AppHeader from "./components/appHeader";
-import AppNav from "./components/appNav";
+import AppHeader from "./components/AppHeader";
+import AppNav from "./components/AppNav";
 
 const Home = lazy(() => import("./views/Home"));
 const About = lazy(() => import("./views/About"));

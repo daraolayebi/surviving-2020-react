@@ -1,6 +1,6 @@
 import React, {Component, lazy} from "react";
 const StoryForm = lazy(() => import("../components/storyForm"));
-const PhrasesList = lazy(() => import("../components/phrases"));
+const PhrasesList = lazy(() => import("../components/phrasesList"));
 
 class SubmitStory extends Component {
 	state = {

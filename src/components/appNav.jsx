@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
-import AppName from "./appName";
+import AppName from "./AppName";
 
 class AppFooter extends Component {
 	state = {};
