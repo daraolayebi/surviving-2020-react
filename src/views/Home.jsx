@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import Typed from "react-typed";
-// import Slideshow from "../components/imageSlideshow";
 import SlideshowGif from "../assets/images/slideshow.gif";
 
 class Home extends Component {
