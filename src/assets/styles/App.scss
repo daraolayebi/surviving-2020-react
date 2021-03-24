@@ -1222,7 +1222,7 @@ body.has-clause {
         position: fixed;
         height: 100vh;
         width: 100%;
-        background-color: #0b1d26;
+        background-color: #212325;
         opacity: 0;
         z-index: -1;
         display: flex;
@@ -1232,10 +1232,10 @@ body.has-clause {
         ul {
             flex-direction: column;
         }
-        &.show {
-            opacity: 1;
-            z-index: 999999;
-        }
+    }
+    body.show-menu .app-menu {
+        opacity: 1;
+        z-index: 999999;
     }
     .menu-link {
         font-size: 18px;

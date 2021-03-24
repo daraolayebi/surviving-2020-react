@@ -11,6 +11,7 @@ class SubmitStory extends Component {
 
 	componentDidMount() {
 		this.displayPhraseList();
+		document.body.classList.remove("show-menu");
 	}
 
 	displayPhraseList = () => {

@@ -3,6 +3,9 @@ import StoriesList from "../components/StoriesList";
 import WorldMap from "../assets/icons/world-map.svg";
 
 class AllStories extends Component {
+	componentDidMount() {
+		document.body.classList.remove("show-menu");
+	}
 	render() {
 		return (
 			<div className="stories">

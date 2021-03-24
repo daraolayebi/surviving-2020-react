@@ -12,7 +12,6 @@ class StoriesList extends Component {
 		axios
 			.get(baseURL + "/responses")
 			.then((response) => {
-				console.log(response);
 				this.setState({loading: false, stories: response.data.data});
 			})
 			.catch((error) => {
@@ -30,7 +29,7 @@ class StoriesList extends Component {
 		return (
 			<React.Fragment>
 				{loading ? (
-					<p>Loading stories ...</p>
+					<h2>Loading stories ...</h2>
 				) : (
 					<React.Fragment>
 						{stories.map(function (story, index) {

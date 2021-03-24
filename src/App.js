@@ -11,20 +11,20 @@ const SubmitStory = lazy(() => import("./views/SubmitStory"));
 const AllStories = lazy(() => import("./views/AllStories"));
 
 class App extends Component {
-	componentDidUpdate(prevProps) {
-		console.log("ROUTE CHANGED");
-		if (this.props.location !== prevProps.location) {
-			console.log("ROUTE CHANGED");
-			this.onRouteChanged();
-		}
-	}
+	// componentDidUpdate(prevProps) {
+	// 	console.log("ROUTE CHANGED");
+	// 	if (this.props.location !== prevProps.location) {
+	// 		console.log("ROUTE CHANGED");
+	// 		this.onRouteChanged();
+	// 	}
+	// }
 
 	render() {
 		return (
 			<Fragment>
 				<AppHeader />
 				<Switch>
-					<Suspense fallback={<div>Loading...</div>}>
+					<Suspense fallback={<div style={{color: "red", fontSize: "100px"}}>Loading...</div>}>
 						<Route path="/about-project" component={About}></Route>
 						<Route path="/submit-story" component={SubmitStory}></Route>
 						<Route path="/explore-stories" component={AllStories}></Route>

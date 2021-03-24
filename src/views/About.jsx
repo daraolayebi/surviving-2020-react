@@ -2,6 +2,10 @@ import React, {Component} from "react";
 import {withRouter} from "react-router-dom";
 
 class About extends Component {
+	componentDidMount() {
+		document.body.classList.remove("show-menu");
+	}
+
 	render() {
 		return (
 			<div className="about-project">

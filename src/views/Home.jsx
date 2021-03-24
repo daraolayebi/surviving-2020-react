@@ -14,6 +14,7 @@ class Home extends Component {
 			this.setState({slideshowVisible: true});
 			if (home) home.classList.add("no-divider");
 		}, 2500);
+		document.body.classList.remove("show-menu");
 	}
 
 	render() {
