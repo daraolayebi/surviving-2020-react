@@ -32,7 +32,6 @@ class StoryForm extends Component {
 
 	handleSubmit = (event) => {
 		event.preventDefault();
-
 		if (!event.target.checkValidity()) return;
 
 		this.setState({loading: true, error: false});

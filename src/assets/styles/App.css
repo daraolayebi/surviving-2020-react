@@ -410,6 +410,13 @@ form {
   width: 100%;
 }
 
+.loading-text {
+  color: #000000;
+  font-size: 40px;
+  text-align: center;
+  margin: 30px;
+}
+
 .slideshow-gif {
   position: absolute;
   left: 50%;

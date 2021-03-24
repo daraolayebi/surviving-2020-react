@@ -15,7 +15,7 @@ const App = () => {
 		<Fragment>
 			<AppHeader />
 			<Switch>
-				<Suspense fallback={<div style={{color: "red", fontSize: "100px"}}>Loading...</div>}>
+				<Suspense fallback={<div className="loading-text">Loading...</div>}>
 					<Route path="/about-project" component={About}></Route>
 					<Route path="/submit-story" component={SubmitStory}></Route>
 					<Route path="/explore-stories" component={AllStories}></Route>
