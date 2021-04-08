@@ -465,6 +465,14 @@ form {
     }
 }
 
+@media screen and (max-width: 640px) {
+    .home-intro {
+        span {
+            color: #e08d5d;
+        }
+    }
+}
+
 @keyframes textclip {
     to {
         background-position: 200% center;
