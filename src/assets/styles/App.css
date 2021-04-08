@@ -449,18 +449,18 @@ form {
 }
 
 .home-intro span {
-  background: linear-gradient(90deg, #e08d5d 30%, #48946e 30%, #5aa9b3 40%);
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 50% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 9s linear infinite;
+  color: #e08d5d;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (min-width: 640px) {
   .home-intro span {
-    color: #e08d5d;
+    background: linear-gradient(90deg, #e08d5d 30%, #48946e 30%, #5aa9b3 40%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 50% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 9s linear infinite;
   }
 }
 

@@ -37,20 +37,27 @@ class Home extends Component {
 					<div className="intro-content">
 						{this.state.slideshowVisible && <img src={SlideshowGif} alt="Slideshow" className="slideshow-gif" />}
 						<h1 className="home-intro">
-							{this.state.width <= 640 ? (
-								<span>
-									Take a moment to share your 2020 story and discover what the rest of the world has been
-									through
-								</span>
-							) : (
+							<Typed
+								strings={[
+									"Take a moment to share your 2020 story and discover what the rest of the world has been through",
+								]}
+								typeSpeed={40}
+							/>
+						</h1>
+						{/* {this.state.width <= 640 ? (
+							<h1>
+								Take a moment to share your 2020 story and discover what the rest of the world has been through
+							</h1>
+						) : (
+							<h1 className="home-intro">
 								<Typed
 									strings={[
 										"Take a moment to share your 2020 story and discover what the rest of the world has been through",
 									]}
 									typeSpeed={40}
 								/>
-							)}
-						</h1>
+							</h1>
+						)} */}
 					</div>
 				</div>
 			</div>
