@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Typed from "react-typed";
+//import Typed from "react-typed";
 import SlideshowGif from "../assets/images/slideshow.gif";
 
 class Home extends Component {
