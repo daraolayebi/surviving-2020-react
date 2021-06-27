@@ -13,20 +13,20 @@ const AllStories = lazy(() => import('./views/AllStories'));
 const App = () => {
 	return (
 		<Fragment>
-			<AppHeader />
-			<Switch>
-				<Suspense
-					fallback={
-						<div className="loading-wrapper">
-							<div className="loading-text">Please wait . . .</div>
-						</div>
-					}>
+			<Suspense
+				fallback={
+					<div className="loading-wrapper">
+						<div className="loading-text">Please wait . . .</div>
+					</div>
+				}>
+				<AppHeader />
+				<Switch>
 					<Route path="/about-project" component={About}></Route>
 					<Route path="/submit-story" component={SubmitStory}></Route>
 					<Route path="/explore-stories" component={AllStories}></Route>
 					<Route exact path="/" component={Home}></Route>
-				</Suspense>
-			</Switch>
+				</Switch>
+			</Suspense>
 			<AppNav />
 			{/*  */}
 		</Fragment>
