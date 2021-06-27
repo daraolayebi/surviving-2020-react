@@ -26,8 +26,8 @@ const App = () => {
 					<Route path="/explore-stories" component={AllStories}></Route>
 					<Route exact path="/" component={Home}></Route>
 				</Switch>
+				<AppNav />
 			</Suspense>
-			<AppNav />
 			{/*  */}
 		</Fragment>
 	);
