@@ -6,6 +6,13 @@
 }
 
 @font-face {
+  font-family: "VictorSerif";
+  src: url("../fonts/VictorSerif-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "After Screen";
   src: url("../fonts/aften_screen.ttf") format("truetype");
   font-weight: 400;
@@ -218,6 +225,7 @@ body {
 
 body {
   font-family: "Ogg Roman", serif;
+  font-family: "VictorSerif", serif;
   font-size: 20px;
   font-weight: 300;
   position: relative;
@@ -231,6 +239,7 @@ h4,
 h5,
 h6 {
   font-family: "Ogg Roman", serif;
+  font-family: "VictorSerif";
 }
 
 h1 {
@@ -410,9 +419,16 @@ form {
   width: 100%;
 }
 
+.loading-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  background: #212325;
+}
+
 .loading-text {
-  color: #000000;
-  font-size: 40px;
+  font-size: 26px;
   text-align: center;
   margin: 30px;
 }
@@ -504,7 +520,7 @@ form {
   top: 0;
   width: 100%;
   margin: auto;
-  background: #0b1c25;
+  background: #212325;
   min-height: 100vh;
   z-index: 9999999999;
 }
@@ -706,6 +722,7 @@ form {
 
 .form-group-block label {
   display: block;
+  margin-bottom: 10px;
 }
 
 .form-group-flex {
@@ -970,6 +987,7 @@ body.has-phrases .phrase-toggle {
 
 .phrase-item {
   font-family: "Ogg Roman", serif;
+  font-family: "VictorSerif", serif;
   font-size: 42px;
   font-weight: 400;
   line-height: 2;

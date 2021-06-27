@@ -1,6 +1,6 @@
-import React, {Component} from "react";
-import axios from "axios";
-import baseURL from "../resources/apiBaseUrl";
+import React, {Component} from 'react';
+import axios from 'axios';
+import baseURL from '../resources/apiBaseUrl';
 
 class StoriesList extends Component {
 	state = {
@@ -10,7 +10,7 @@ class StoriesList extends Component {
 
 	fetchStories = () => {
 		axios
-			.get(baseURL + "/responses")
+			.get(baseURL + '/responses')
 			.then((response) => {
 				this.setState({loading: false, stories: response.data.data});
 			})
