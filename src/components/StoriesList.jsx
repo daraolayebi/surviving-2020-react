@@ -37,7 +37,8 @@ class StoriesList extends Component {
 								<div className="single-response" key={index}>
 									{story.response}
 									<span className="response-owner">
-										&mdash; {story.name}, {story.city}
+										&mdash; {story.name}, {story.city} on {' '}
+										{new Date(story.createdAt).toLocaleDateString()}
 									</span>
 								</div>
 							);
